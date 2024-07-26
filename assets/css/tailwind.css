@@ -5,11 +5,33 @@
 /*
 Document
 ========
-*/
+*/ 
 
 /**
 Use a better box model (opinionated).
 */
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  overflow: hidden;
+  animation: scroll 15s linear infinite;
+}
+
+.animate-scroll img {
+  flex-shrink: 0;
+  width: 12rem; /* Ensure consistent width for all images */
+  height: 12rem; /* Ensure consistent height for all images */
+  margin-right: 1rem;
+}
 
 *,
 ::before,
